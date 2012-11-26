@@ -324,12 +324,7 @@ public class IndexUpdaterTest extends AbstractBridgedXWikiComponentTestCase
         IndexWriterConfig config =
             new IndexWriterConfig(Version.LUCENE_40, new StandardAnalyzer(Version.LUCENE_40));
         IndexWriter w =
-<<<<<<< HEAD
             new IndexWriter(indexUpdater.getDirectory(), config);
-=======
-            new IndexWriter(indexUpdater.getDirectory(), new StandardAnalyzer(Version.LUCENE_36),
-                MaxFieldLength.LIMITED);
->>>>>>> 5bc2d17aea20d99fb7725ae406839857e31d3270
         w.close();
     }
 }
